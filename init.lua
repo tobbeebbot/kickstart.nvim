@@ -99,7 +99,7 @@ vim.g.maplocalleader = ' '
 vim.opt.number = true
 -- You can also add relative line numbers, for help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -147,6 +147,10 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- [[ Custom Keymaps ]]
+vim.keymap.set('n', '<A-j>', 'ddp==', { desc = 'Move line down' })
+vim.keymap.set('n', '<A-k>', 'dd2kp==', { desc = 'Move line up' })
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
